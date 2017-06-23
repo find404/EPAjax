@@ -11,31 +11,6 @@ self :: function
 
 ![image](https://github.com/find404/SelfAjax/blob/master/images/remd.png)
  
-                               事件发起（Start）
-                                    |
-                                    |
-                                    |
-    验证基本数据 (Verification)      |
-                            \				   |
-                              \			  |
-                                \		 |
-                                  \	|
-                                    \       
-                                    |     不同业务逻辑间应对的不同的业务方法（Demand）
-                                    |				/
-                                    |			/
-                                    |		/
-                                    |	/
-                                    /
-                                    |
-                  ajax Start        |
-                            \				   |
-                              \			  |
-                                \		 |	
-                                  \	|
-                                    \
-
- 
 
 eg :
 
