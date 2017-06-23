@@ -6,20 +6,10 @@
   var SelfAjax = function(){
 		var SelfClosure={
 			get_ordinary : function(data){
-								if(data.code=='100'){
-									tan(data.msg,'6');
-									setTimeout("window.location.reload()",3000);
-								}else{
-									tan(data.msg,'6');
-								}
+	 							//codeing....
 							},
 			get_order : function(data){
-								if(data){
-									console.log('-func_check1func_check1');
-								}else{
-									tan(data.mag,'6');
-									return false;
-								}
+	 							//codeing....
 						},
 		}
 		return function(type,url,SendData,FunctionName) {
@@ -35,16 +25,15 @@
  */
 	var SelfConfirm = function(){
 		var SelfClosure={
-			Zero : function(clickmsg,attr_action,FromData){
-						FromData.push({"name":'unique',"value":attr_action+'@'+SelfJsB64(Date.parse(new Date()).toString().substr(0,10))});					
-						SelfAjax('post','/Admin/Infor/CommonAjaxDmls',FromData,'get_ordinary');
+			Zero : function(clickmsg,attr_action,FromData){				
+						SelfAjax('post','/Admin/Infor/find404',FromData,'get_ordinary');
 				},
 			One : function(clickmsg,attr_action,FromData){
-						 //codeing....
-					},
+						 	//codeing....
+				},
 			Two : function(clickmsg,attr_action,FromData){
 							 //codeing....
-					},
+				},
 		}
 		
 		return function (clickmsg,attr_action,FromData,FunctionName){
@@ -61,11 +50,6 @@
 
 	$(".MySelfOneButton").click(function(){
  		var id			= '';
- 		var clickmsg		= $(this)[0]['innerHTML'];		
-		var FromData 		= new Array();
-		var attr_action 	= '';
-		var MySelfParameter	= '';
-
 		if(id==''){
 			tan('请选择要操作的ID！',6);	return false;
 		}
