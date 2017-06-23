@@ -9,7 +9,7 @@ self :: function
 规范起来每个到后台的接口，让所有的发起ajax都只用这一个方法。
 
 
- 
+![image](https://github.com/find404/SelfAjax/blob/master/images/remd.png)
  
                                事件发起（Start）
                                     |
