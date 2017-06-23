@@ -1,0 +1,28 @@
+/**
+ * 自用封装AJAX
+ * zhy	find404@foxmail.com
+ * 2017年3月15日 12:29:14
+ */
+  var SelfAjax = function(){
+		var SelfClosure={
+			get_ordinary : function(data){
+								if(data.code=='100'){
+									tan(data.msg,'6');
+									setTimeout("window.location.reload()",3000);
+								}else{
+									tan(data.msg,'6');
+								}
+							},
+			get_order : function(data){
+								if(data){
+									console.log('-func_check1func_check1');
+								}else{
+									tan(data.mag,'6');
+									return false;
+								}
+						},
+		}
+		return function(type,url,SendData,FunctionName) {
+			$[type](url, SendData, SelfClosure[FunctionName])
+		}
+	}();
