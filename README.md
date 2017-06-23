@@ -16,9 +16,9 @@ self :: function
                                     |
                                     |
     验证基本数据 (Verification)      |
-                            \				|
-                              \			|
-                                \		|
+                            \				   |
+                              \			  |
+                                \		 |
                                   \	|
                                     \       
                                     |     不同业务逻辑间应对的不同的业务方法（Demand）
@@ -29,9 +29,9 @@ self :: function
                                     /
                                     |
                   ajax Start        |
-                            \				|
-                              \			|
-                                \		|	
+                            \				   |
+                              \			  |
+                                \		 |	
                                   \	|
                                     \
 
