@@ -26,3 +26,51 @@
 			$[type](url, SendData, SelfClosure[FunctionName])
 		}
 	}();
+
+
+/**
+ * 自用封装发起时机前，不同业务间不同的JS操作。
+ * zhy	find404@foxmail.com
+ * 2017年4月11日 10:08:33
+ */
+	var SelfConfirm = function(){
+		var SelfClosure={
+			Zero : function(clickmsg,attr_action,FromData){
+						FromData.push({"name":'unique',"value":attr_action+'@'+SelfJsB64(Date.parse(new Date()).toString().substr(0,10))});					
+						SelfAjax('post','/Admin/Infor/CommonAjaxDmls',FromData,'get_ordinary');
+				},
+			One : function(clickmsg,attr_action,FromData){
+						 //codeing....
+					},
+			Two : function(clickmsg,attr_action,FromData){
+							 //codeing....
+					},
+		}
+		
+		return function (clickmsg,attr_action,FromData,FunctionName){
+			return SelfClosure[FunctionName] && SelfClosure[FunctionName](clickmsg,attr_action,FromData) 
+		}
+	}();
+	
+	
+/**
+* 事件发起前，基本的前台数据验证
+* zhy	find404@foxmail.com
+* 2017年3月15日 12:29:14
+*/
+
+	$(".MySelfOneButton").click(function(){
+ 		var id			= '';
+ 		var clickmsg		= $(this)[0]['innerHTML'];		
+		var FromData 		= new Array();
+		var attr_action 	= '';
+		var MySelfParameter	= '';
+
+		if(id==''){
+			tan('请选择要操作的ID！',6);	return false;
+		}
+
+		FromData 	= $('#MySelfForm').serializeArray();
+		SelfConfirm(null,$('.attr_action').val(),FromData,'Zero');		
+
+	});	
