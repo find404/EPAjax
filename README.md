@@ -1,4 +1,4 @@
-# EPAjax
+# SelfAjax
 
 自用的项目中封装的jq的ajax方法，
 self :: function 
